@@ -1,0 +1,99 @@
+body{
+    font-family: 'Share', cursive;
+    background-image: url(./images/nightlife.png);
+    background-attachment: fixed;
+}
+
+datalist{
+    display: block;
+}
+
+h1{
+    text-align: center;
+    margin-top: 15px;
+}
+
+button:active{
+    background: dodgerblue;
+}
+
+a{
+    color: red;
+}
+
+.hidden{
+    display: none;
+}
+
+.pageTitle{
+    font-family: 'Rock Salt', cursive;
+    color: floralwhite;
+}
+
+.modal-body{
+    color:black;
+}
+
+.firstBtns{
+    margin-top: 90px;
+    text-align: center;
+ 
+}
+
+.active{
+    background: dodgerblue;
+}
+
+.btn-xlarge{
+    padding: 40px 60px;
+    font-size: 2rem;
+}
+
+.loadMore{
+    text-align: center;
+}
+
+.eventButton{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card{
+    margin: 0 auto;
+    float: none;
+}
+.card-body{
+    color:white;
+}
+
+#eventDump{
+    margin-top:60px;
+}
+
+#tagLine{
+    text-align: center;
+    color: floralwhite;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    line-height: 1;
+    margin: auto;
+    z-index: 0;
+}
+
+#or{
+    color: floralwhite;
+    margin-top: 8px;
+}
+
+#catDump {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+}
+
+#div50{
+    height: 50px;
+}
+#openTitle{
+    margin-top: 95px;
+}

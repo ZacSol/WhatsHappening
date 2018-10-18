@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>What's Happening?</title>
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt|Share" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark fixed-top bg-dark hidden">
+        <a class="navbar-brand pageTitle"  href="#">What's Happening?</a>
+
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formModal">
+                    Find an Event
+                </button>
+    </nav>
+    <div class="container-fluid">
+        <!-- Modal -->
+        <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalLabel">Search</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+
+                            <!--The user will be able to find events happening daily, weekly, the following week, and all events by clicking on buttons.-->
+                            <h4>DATE</h4>
+                            <button class="timebutton" type="button" id="todayBtn">TODAY</button>
+                            <button class="timebutton" type="button" id="thisweekBtn">THIS WEEK</button>
+                            <button class="timebutton" type="button" id="nextweekBtn">NEXT WEEK</button>
+                            <button class="timebutton" type="button" id="allBtn">ALL</button>
+
+                            <h4>LOCATION</h4>
+                            <input type="checkbox" name="location" value="location" id="useMyLoc"> Use My Location <br>
+                            Zip Code/City <input type="text" name="city" id="searchArea">
+
+                            <!-- //!--The user will be able to find events according to distance(0-50miles) by using a distance slider-->
+                            <h4>DISTANCE</h4>
+                            <div>
+                                <input id="distanceSlider" type="range" name="points" id="points" value="50" min="1" max="100" data-show-value="true">
+                                <p> <span id="value"></span> miles</p>
+                            </div>
+
+                            <!---The user will be able to choose from various categories to narrow down event selections-->
+                            <h4>CATEGORIES</h4>
+                            <div id="catDump"></div>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="findEventBtn">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="firstView">
+            <h1 class="pageTitle" id="openTitle">What's Happening?</h1>
+            <div class="row">
+                <div class="firstBtns col-12">
+                    <button class="nowButton btn btn-xlarge btn-success">NOW!</button><br />
+                    <div class="col-12">
+                        <p id="or" class="col-12">OR</p>
+                    </div>
+                    <!-- <button class = "showFilter" type="button">LATER</button><br />  -->
+                    <button type="button" class=" btn btn-xlarge btn-primary " data-toggle="modal" data-target="#formModal">
+                        Later
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--The user will see a display of the event information along with a map-->
+
+        <div id="eventDump"></div>
+        <div id="row">
+            <div class="col-12">
+                <button class="btn btn-success loadMore hidden align-center" id="loadMoreBtn">Load More</button>
+            </div>
+        </div>
+        <div id="div50"></div>
+    </div>
+    <nav class="navbar fixed-bottom navbar-dark bg-dark">
+        <p id="tagLine" class="navbar-brand">WE KNOW WHAT'S HAPPENING.</p>
+    </nav>
+
+    <!-- Basic jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+    </script>
+    <!-- Eventful API Link -->
+    <script type="text/javascript" src="http://api.eventful.com/js/api"></script>
+    <!-- Moment js -->
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- bootstrap functionality -->
+    <script src="./assets/app.js"></script>
+</body>
+
+</html>
